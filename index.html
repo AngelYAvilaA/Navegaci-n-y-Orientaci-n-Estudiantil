@@ -42,5 +42,31 @@
         </map>
     </div>
 
+    <dialog id="dialogo">
+        <img id="dialogo-imagen" src="Img/arquitecturaITA.jpeg" alt="" class="image">
+        <h1 id="dialogo-titulo" class="title"></h1>
+        <h5 id="dialogo-subtitulo"></h5>
+        <p id="dialogo-descripcion" class="description"></p>
+        <hr>
+        <button class="BCerrar" onclick="cerrarDialogo()">Cerrar</button>
+    </dialog>
+
+    <script src="datosEdificios.js"></script> 
+    <script>
+        function mostrarDialogo(idedificio) {
+            const datos = datosEdificios[idedificio];
+            if (datos) {
+                document.getElementById("dialogo-titulo").textContent = datos.titulo;
+                document.getElementById("dialogo-subtitulo").textContent = datos.subtitulo;
+                document.getElementById("dialogo-descripcion").textContent = datos.descripcion;
+                document.getElementById("dialogo-imagen").src = datos.imagen;
+                document.getElementById("dialogo").showModal();
+            }
+        }
+
+        function cerrarDialogo() {
+            document.getElementById("dialogo").close();
+        }
+    </script>
 </body>
 </html>

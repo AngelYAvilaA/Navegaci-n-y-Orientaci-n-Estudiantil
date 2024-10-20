@@ -5,8 +5,54 @@
     height: 715px;
 }
 
+dialog {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #001f3f; /* Azul marino */
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px); /* Mueve el diálogo hacia arriba inicialmente */
+    opacity: 0; /* Comienza invisible */
+    transition: transform 3.0s ease, opacity 3.0s ease; /* Transiciones para movimiento y opacidad */
+}
+
+dialog[open] {
+    transform: translateY(0); /* Restablece la posición al abrir */
+    opacity: 1; /* Muestra el diálogo */
+}
 .image {
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+.title {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.BCerrar {
+    background-color: #ff4d4d; /* Color rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Posición absoluta */
+    top: 20px; /* Espacio desde la parte superior */
+    right: 20px; /* Espacio desde el lado derecho */
+}
+
+.BCerrar:hover {
+    background-color: #ff1a1a; /* Color más oscuro al pasar el ratón */
 }
