@@ -1,0 +1,12 @@
+.Plano img{    
+    display: block;
+    margin: auto;
+    max-width: 1500px;
+    height: 715px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
