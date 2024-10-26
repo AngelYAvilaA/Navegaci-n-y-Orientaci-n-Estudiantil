@@ -162,3 +162,19 @@ const datosEdificios = {
     imagen: 'Img/'
 } 
     };
+
+
+function cambiarImagen(nuevaImagen) {
+    document.getElementById('mapImage').src = nuevaImagen;
+}
+
+function preloadImages() {
+    const images = ['planotec.jpg', 'planotecarq.jpg'];  
+    images.forEach(src => {
+        const img = new Image(); 
+        img.src = src;  
+    });
+}
+
+
+window.onload = preloadImages;
