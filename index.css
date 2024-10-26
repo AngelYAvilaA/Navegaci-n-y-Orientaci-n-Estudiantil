@@ -1,4 +1,4 @@
-.Plano img{    
+.Plano img {
     display: block;
     margin: auto;
     max-width: 1500px;
@@ -9,20 +9,31 @@ dialog {
     max-width: 800px;
     margin: 20px auto;
     text-align: center;
-    background-color: #001f3f; /* Azul marino */
+    background-color: #001f3f;
     color: white;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(-10px); /* Mueve el diálogo hacia arriba inicialmente */
-    opacity: 0; /* Comienza invisible */
-    transition: transform 3.0s ease, opacity 3.0s ease; /* Transiciones para movimiento y opacidad */
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: transform 3.0s ease, opacity 3.0s ease;
 }
 
 dialog[open] {
-    transform: translateY(0); /* Restablece la posición al abrir */
-    opacity: 1; /* Muestra el diálogo */
+    transform: translateY(0);
+    opacity: 1;
 }
+
+.area {
+    outline:#4CAF50; /* Para evitar el contorno por defecto */
+}
+
+.area:hover {
+    cursor: pointer; /* Cambiar el cursor cuando se pasa sobre el área */
+    opacity: 0.5; /* Cambiar la opacidad al pasar el mouse */
+    transition: opacity 0.3s; /* Transición suave */
+}
+
 .image {
     width: 100%;
     height: auto;
@@ -40,7 +51,7 @@ dialog[open] {
 }
 
 .BCerrar {
-    background-color: #ff4d4d; /* Color rojo */
+    background-color: #ff4d4d;
     color: white;
     border: none;
     border-radius: 5px;
@@ -48,11 +59,126 @@ dialog[open] {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    position: absolute; /* Posición absoluta */
-    top: 20px; /* Espacio desde la parte superior */
-    right: 20px; /* Espacio desde el lado derecho */
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .BCerrar:hover {
-    background-color: #ff1a1a; /* Color más oscuro al pasar el ratón */
+    background-color: #ff1a1a;
+}
+
+.toggle-btn {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 1000;
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.toggle-btn.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #001f3f;
+    transition: left 0.3s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.highlight-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.highlight-btn:hover {
+    background-color: #004080;
+}
+
+.highlight-btn.active {
+    background-color: #004d99;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Estilos para el menú de navegación */
+.navigation-menu {
+    display: none;
+}
+
+.navigation-menu.active {
+    display: block;
+}
+
+.buildings-menu {
+    display: block;
+}
+
+.buildings-menu.hidden {
+    display: none;
+}
+
+.select-building {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select-building option {
+    background-color: #001f3f;
+    color: white;
 }
