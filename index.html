@@ -7,8 +7,59 @@
     <title>Plano del Tecnologico</title>
 </head>
 <body>
+
+    <button id="toggleSidebar" class="toggle-btn">☰</button>
+
+    <div id="sidebar" class="sidebar">
+        <button id="closeSidebar" class="close-btn">&times;</button>
+        
+        <!-- Menú de edificios -->
+        <div id="buildingsMenu" class="buildings-menu">
+        <h2>Resaltar Edificios</h2>
+        <button class="highlight-btn" data-group="sistemas">Sistemas Computacionales</button>
+        <button class="highlight-btn" data-group="arquitectura" onclick="cambiarImagen('Img/planotecarq.jpg')">Arquitectura</button>
+        <button class="highlight-btn" data-group="electromecanica">Electromecánica</button>
+        <button class="highlight-btn" data-group="bioquimica">Bioquímica</button>
+        <button class="highlight-btn" data-group="gestion">Gestión Empresarial</button>
+        <button class="highlight-btn" data-group="contaduria">Contaduría</button>
+        <button class="highlight-btn" data-group="clear">Limpiar resaltado</button>
+        <hr>
+        <button id="switchToNav" class="highlight-btn">Mostrar Navegación</button>
+    </div>
+
+            <!-- Menú de navegación -->
+            <div id="navigationMenu" class="navigation-menu">
+                <h2>Navegación</h2>
+                <select id="fromBuilding" class="select-building">
+                    <option value="">Selecciona origen</option>
+                    <option value="edificios700">Sistemas - Edificio 700</option>
+                    <option value="edificiosLaborCompu">Laboratorio de Cómputo</option>
+                    <option value="edificios800">Arquitectura</option>
+                    <option value="edificios900">Electromecánica - 900</option>
+                    <option value="edificios1000">Electromecánica - 1000</option>
+                    <option value="edificios500">Bioquímica</option>
+                    <option value="edificios400">Gestión Empresarial</option>
+                    <option value="edificios200">Contaduría</option>
+                </select>
+                <select id="toBuilding" class="select-building">
+                    <option value="">Selecciona destino</option>
+                    <option value="edificios700">Sistemas - Edificio 700</option>
+                    <option value="edificiosLaborCompu">Laboratorio de Cómputo</option>
+                    <option value="edificios800">Arquitectura</option>
+                    <option value="edificios900">Electromecánica - 900</option>
+                    <option value="edificios1000">Electromecánica - 1000</option>
+                    <option value="edificios500">Bioquímica</option>
+                    <option value="edificios400">Gestión Empresarial</option>
+                    <option value="edificios200">Contaduría</option>
+                </select>
+                <button id="showPath" class="highlight-btn">Mostrar Ruta</button>
+                <hr>
+                <button id="switchToBuildings" class="highlight-btn">Volver a Edificios</button>
+            </div>
+        </div>
+
     <div class="Plano">
-        <img src="Img/planotec.jpg" usemap="#miMapa" alt="Mapa de imagen"/>
+        <img id="mapImage" src="Img/planotec.jpg" usemap="#miMapa" alt="Mapa de imagen"/>
 
         <map name="miMapa">
             <area shape="rect" coords="190,440,305,495"   href="#" alt="edificios700" onclick="mostrarDialogo('edificios700')">
@@ -68,5 +119,7 @@
             document.getElementById("dialogo").close();
         }
     </script>
+    <script src="main.js"></script>
 </body>
 </html>
+
