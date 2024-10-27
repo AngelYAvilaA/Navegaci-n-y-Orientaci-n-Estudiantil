@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Plano Tecnologico Acapulco</title>
+    
+</head>
+<body>
+
+    <button id="toggleSidebar" class="toggle-btn">☰</button>
+    <div class="sidebar" id="sidebar">
+        <button id="closeSidebar" class="close-btn">&times;</button>
+        <h2>Resaltar Edificios</h2>
+        <button class="highlight-btn" data-group="Sistemas">Sistemas Computacionales</button>
+        <button class="highlight-btn" data-group="Arquitectura">Arquitectura</button>
+        <button class="highlight-btn" data-group="Electromecanica">Electromecánica</button>
+        <button class="highlight-btn" data-group="Bioquimica">Bioquímica</button>
+        <button class="highlight-btn" data-group="Gestion">Gestión Empresarial</button>
+        <button class="highlight-btn" data-group="Contaduria">Contaduría</button>
+        <button class="highlight-btn" data-group="clear">Limpiar resaltado</button>
+        <hr>
+    </div>
+
+    <div class="svg-container">
+        <svg 
+            viewBox="0 0 1920 1080"
+            version="1.1"
+            id="svg1"
+            xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+            <defs id="defs1" />
+            <g id="PlanoTecnologico">
+                <image
+                width="1920"
+                height="1112"
+                preserveAspectRatio="none"
+                style="image-rendering:optimizeQuality"
+                xlink:href="planotec2.png"
+                id="image1"
+                x="1.795367"
+                y="-17.80695" />
+            </g>
+            <g id="Edificios">
+                <rect id="Edificio1000" width="179.119" height="96.137398" x="33.793331" y="295.55386" data-group="Electromecanica"/>    
+                <rect id="Edificio900" width="179.119" height="96.137398" x="31.877138" y="128.01454" data-group="Electromecanica"/>
+                <rect id="Edificio800" width="179.119" height="96.137398" x="374.60178" y="186.5898" data-group="Arquitectura"/>
+                <rect id="Edificio700" width="179.119" height="96.137398" x="299.97604" y="660.56586" data-group="Sistemas"/>
+                <rect id="Edificio600" width="160.28799" height="52.952381" x="927.12872" y="580.55988" />
+                <rect id="Edificio500" width="190.342" height="50.805664" x="711.99487" y="986.77478" data-group="Gestion" />
+                <rect id="Edificio400" width="193.205" height="50.805664" x="681.9408" y="878.72327" data-group="Gestion"/>
+                <rect id="Edificio300" width="160.28799" height="52.952381" x="623.26385" y="510.91891" />
+                <rect id="Edificio200" width="160.28799" height="52.952381" x="685.85333" y="621.43109" />
+                <rect id="Edificio100" width="160.28799" height="52.952381" x="897.74261" y="685.30243" data-group="Bioquimica" />
+                <rect id="LaboratorioMicrobiologia" width="188.911" height="52.952381" x="866.58044" y="449.69754" data-group="Bioquimica" />
+                <rect id="LaboratorioInvestigacionIBQ" width="188.911" height="52.952381" x="625.11066" y="723" data-group="Bioquimica" />
+                <rect id="LaboratorioQuimica" width="133.097" height="52.952381" x="909" y="798" data-group="Bioquimica" />
+                <rect id="LaboratorioComputo"width="112.345" height="118.78507" x="312.70529" y="925.95111" data-group="Sistemas"/>
+                <rect id="LaboratorioElectromecanica" width="98.749001" height="85.868729" x="988.20593" y="282.65121" data-group="Electromecanica" />
+                <rect id="LaboratorioCienciasBasicas" width="99.464996" height="53.667953" x="1408.9626" y="797.14801" />
+                <rect id="LaboratorioEduDistancia" width="65.833" height="50.090092" x="1311.6448" y="807.16602" />
+                <rect id="CienciasBasicas" width="65.833" height="73.703987" x="1417.5496" y="721.2973" />
+                <rect id="TallerMaquinas" width="148.839" height="99.464622" x="608.95239" y="319.14542" />
+                <rect id="TallerMantenimientoLaboratorioArqui" width="103.758" height="103.04247" x="829.34875" y="263.33075" data-group="Arquitectura"/>
+                <rect id="CentroInformacion" width="196.067" height="159.57271" x="1371.7529" y="138.10553" />
+                <rect id="Posgrado" width="125.941" height="89.446587" x="1294.4711" y="524.51477" />
+                <rect id="SalaMaestros" width="69.411003" height="52.952381" x="1313.7915" y="721.2973" />
+                <rect id="EdificioEconomicoAdministrativo" width="95.887001" height="95.171173" x="1575.6912" y="716.28827" />
+                <rect id="EdificioAdministrativo" width="128.80299" height="70.841698" x="1537.0502" y="552.42212" />
+            </g>
+        </svg>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
